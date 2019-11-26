@@ -1,0 +1,3 @@
+# tip from https://www.linode.com/docs/applications/configuration-management/secrets-management-with-terraform/
+
+do_token = "DIGITALOCEAN_API_TOKEN"
