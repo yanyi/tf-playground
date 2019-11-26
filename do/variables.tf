@@ -4,5 +4,5 @@ variable "do_token" {
 
 variable "do_region" {
   description = "Region to deploy in"
-  default = "sgp1"
+  default     = "sgp1"
 }
