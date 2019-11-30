@@ -17,6 +17,13 @@ resource "google_compute_instance" "vm_instance" {
     network = google_compute_network.vpc_network.name
     access_config {}
   }
+
+  service_account {
+    email = var.gcp_default_service_account_email
+    scopes = [
+      "storage-ro",
+    ]
+  }
 }
 
 resource "google_compute_firewall" "tf-playground-network-firewall" {
