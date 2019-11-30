@@ -18,3 +18,13 @@ resource "google_compute_instance" "vm_instance" {
     access_config {}
   }
 }
+
+resource "google_compute_firewall" "tf-playground-network-firewall" {
+  name    = "tf-playground-network"
+  network = google_compute_network.vpc_network.name
+
+  allow {
+    protocol = "tcp"
+    ports    = ["22"]
+  }
+}
